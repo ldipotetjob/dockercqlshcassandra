@@ -2,30 +2,18 @@
 
 # Create an Image For Docker-Cqlsh-Cassandra for use CQLsh tool in depth #
 
-This project is a proof of concept about the basic architecture of a Play Framework multi module project.
+This project is an installation of CQLsh tool that is installed in Specific Cassandra Image.
+
+## Why Should I need this image? ##
+
+* Suppouse than I have an application/project that need to launch **cqlsh COPY TO/FROM**. For other use case 
+  is enough and easy the **phyton pip intallation + phyton cqlsh installation**.  
 
 ## What will you find here? ##
 
-* A basic multi module architecture that will let you implement and process Restful WebServices in Scala programming language, it can be a template for any multi module Play Framework project.
-
-* An implementation of HTTP protocol Content-Negotiation:
-    * Accept
-    * Content-Type
-    * You can add here any other header fields involved in content-negotiation.
-    
-* How generate CSV response depending of Content-Negotiation:
-    * Implementing custom template using twirl engine for return a CSV file depending of the Accept header field.
-    * Implement at the same time json responses.
-    
-* How implement TDD in our development process:
-    * We have create the base of Spec with FlatSpec style: We have NOT covered the whole lines of code but we have created enoguh test suites for give you an idea of how to make with the rest. We have covered at least Controllers, action,implicit conversions and services. 
-    
-## What you will not find here, but you should ##
-
-* ErrorHandler implementation as indicate play framework specification. 
-* Internationalization of messages.
-* LogHandler: 
-    * Although we register some log, must exist a log handler, which could be a trait. This trait could be implemented by all those classes that, at some point, can generate a log.
+* A basic image that contain cqlsh tool. I have copied the CQLsh tools and all libraries that this tool need for work.
+  This image by itself doesn't worth nothing. You need to include to it your own project and scripts that will use the CQLsh 
+  tool that we have installed here. 
    
 ## Requirements, Installation, Launching, Testing ##
 
@@ -37,8 +25,9 @@ This project is a proof of concept about the basic architecture of a Play Framew
 
 ### Installation ###
 
+* run Cassandra oficial image: **docker run --name cassandra37 -d cassandra:3.7**
 * clone repository
-* go to root project
+* go to root project and add your own project/libraries that will use 
 * type in terminal: sbt run
 
 video: [running sbt](https://youtu.be/AWP7ODqjYmI)
