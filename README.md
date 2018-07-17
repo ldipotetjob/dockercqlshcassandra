@@ -26,19 +26,19 @@ This project is an installation of CQLsh tool that is installed in Specific Cass
 * run Cassandra oficial image: **docker run --name cassandra37 -d cassandra:3.7**
 * clone repository
 * go to root project and add your own project/libraries that will use the CQLshtool 
+* create your image: **docker build -t image_name_cqlsh_project .**
 
 ### Launching ###
 
-Sequence of Docker Command lines that must be executed for create our own image and how run it 
+Sequence of Docker Command lines that must be executed for create our own image and run it 
 
 ```
-# create image
-docker build -t image_name_cqlsh_project .
 # run image 
 # cassandra37: container's name where cassandra is running can be the container id too 
-docker run --name scadipfinal --env CASSANDRA_IPADDRESS=echo $(sudo docker inspect -f '{{.NetworkSettings.IPAddress}}' cassandra37)
+docker run --name scadipfinal --env CASSANDRA_IPADDRESS=echo $(sudo docker inspect -f '{{.NetworkSettings.IPAddress}}' cassandra37) image_name_cqlsh_project
 
 ```
+
 <br>
 <br>
 <br>
