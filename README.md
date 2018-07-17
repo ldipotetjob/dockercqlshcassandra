@@ -50,7 +50,7 @@ The next line show an example about how can be used
 echo "SHOW VERSION"|cqlsh $CASSANDRA_IPADDRESS
 
 ```
-The script under bin folder can/must be changed for your own code but always considering IP address . 
+The script under **bin** folder can/must be changed for your own code but always considering **IP address** . 
 
 I have a more detailed explanation in [this post](https://mojitoverdeintw.blogspot.com/2018/07/relationship-between-docker-cqlsh.html) on my blog
 
