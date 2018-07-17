@@ -2,7 +2,7 @@
 
 # Create an Image For Docker-Cqlsh-Cassandra for use CQLsh tool in depth #
 
-This project is an installation of CQLsh tool that is installed in Specific Cassandra Image.
+This project is an installation of CQLsh tool that is installed in an Specific Cassandra Image.
 
 ## When Should I need this image? ##
 
