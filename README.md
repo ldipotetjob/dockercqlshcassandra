@@ -19,16 +19,14 @@ This project is an installation of CQLsh tool that is installed in Specific Cass
 
 ### Requirements ###
 
-* jdk 1.7+ -> how check java version: java -version
-* scala 2.11.x -> how check scala version: scala -version
-* sbt 0.13.11+ -> how check sbt version: sbt about
+* Docker 17.12.0-ce, build c97c6d6 -> how check docker version: docker --version
 
 ### Installation ###
 
 * run Cassandra oficial image: **docker run --name cassandra37 -d cassandra:3.7**
 * clone repository
 * go to root project and add your own project/libraries that will use 
-* type in terminal: sbt run
+* 
 
 video: [running sbt](https://youtu.be/AWP7ODqjYmI)
 
