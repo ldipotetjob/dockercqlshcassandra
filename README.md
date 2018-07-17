@@ -45,6 +45,15 @@ access from an application that is hosted **OTHER** container via CQLsh tool **A
 are trying to launch is **COPY TO/FROM** command.
 The next line show an example about how can be used 
 
+```
+# CASSANDRA_IPADDRESS: Cassandra DB's IP address 
+echo "SHOW VERSION"|cqlsh $CASSANDRA_IPADDRESS
+
+```
+The script under bin folder can/must be changed for your own code but always considering IP address . 
+
+I have a more detailed explanation in [this post]() in my blog
+
 
 <br>
 <br>
