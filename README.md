@@ -15,7 +15,7 @@ This project is an installation of CQLsh tool that is installed in Specific Cass
   This image by itself doesn't worth nothing. You need to include to it your own project and scripts that will use the CQLsh 
   tool that we have installed here. 
    
-## Requirements, Installation, Launching, Testing ##
+## Requirements, Installation, Launching ##
 
 ### Requirements ###
 
@@ -25,36 +25,20 @@ This project is an installation of CQLsh tool that is installed in Specific Cass
 
 * run Cassandra oficial image: **docker run --name cassandra37 -d cassandra:3.7**
 * clone repository
-* go to root project and add your own project/libraries that will use 
-* 
-
-video: [running sbt](https://youtu.be/AWP7ODqjYmI)
+* go to root project and add your own project/libraries that will use the CQLshtool 
 
 ### Launching ###
 
-You have several rest sevices to call:
+Sequence of Docker Command lines that must be executed for create our own image and how run it 
 
-This is [the route file](https://github.com/ldipotetjob/restfulinplay/blob/master/modules/apirest/conf/apirest.routes) and it has commented several examples on how call all services exposed in this project.
-The commented examples has the following structure:
+```
+# create image
+docker build -t image_name_cqlsh_project .
+# run image 
+# cassandra37: container's name where cassandra is running can be the container id too 
+docker run --name scadipfinal --env CASSANDRA_IPADDRESS=echo $(sudo docker inspect -f '{{.NetworkSettings.IPAddress}}' cassandra37)
 
-\# pattern: 
-
-\# example: 
-
-You can paste the \# example: in your **terminal** in case of **curl** o in your **browser** in case **http**
-
-
-### Testing ###
-
-* go to root project
-* type in terminal: sbt test
-
-video: [running test](https://youtu.be/s-jO1PFaUR4)
-
-The basic information is [here on gitHub](https://github.com/ldipotetjob/restfulinplay/blob/master/package.txt) and contains the main project information.
-
-
-**Each package in the source code has a file (package.txt) that explains the fundamentals of that specific package.**  
+```
 <br>
 <br>
 <br>
