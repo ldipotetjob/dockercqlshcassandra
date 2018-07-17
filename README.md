@@ -4,10 +4,11 @@
 
 This project is an installation of CQLsh tool that is installed in Specific Cassandra Image.
 
-## Why Should I need this image? ##
+## When Should I need this image? ##
 
-* Suppouse than I have an application/project that need to launch **cqlsh COPY TO/FROM**. For other use case 
-  is enough and easy the **phyton pip intallation + phyton cqlsh installation**.  
+* Suppouse that you have an application/project that need to launch **cqlsh COPY TO/FROM**. 
+
+For other use case is enough and easy the **phyton pip intallation + phyton cqlsh installation**.  
 
 ## What will you find here? ##
 
