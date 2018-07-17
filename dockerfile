@@ -29,7 +29,7 @@ COPY  ./openssl_criptolibs/* /usr/lib/x86_64-linux-gnu/
 # Make port 80 available to the world outside this container
 EXPOSE 80 7000 7001 7199 9042 9160
 
-# !!UNCOMMENT WITH THE PROPER ENTRY POINT
+# !!CHANGE FOR A PROPER ENTRY POINT
  ENTRYPOINT [./bin/testcqlshscript]
 
 # !!UNCOMMENT WITH THE PROPER ARGS
