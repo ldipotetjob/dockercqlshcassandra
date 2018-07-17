@@ -38,6 +38,13 @@ Sequence of Docker Command lines that must be executed for create our own image 
 docker run --name scadipfinal --env CASSANDRA_IPADDRESS=echo $(sudo docker inspect -f '{{.NetworkSettings.IPAddress}}' cassandra37) image_name_cqlsh_project
 
 ```
+### Tips ###
+
+The idea for use this image is if you have a Cassandra Data Base in a DOcker Container and you are trying to 
+access from an application that is hosted **OTHER** container via CQLsh tool **AND** and at the same time what you 
+are trying to launch is **COPY TO/FROM** command.
+The next line show an example about how can be used 
+
 
 <br>
 <br>
